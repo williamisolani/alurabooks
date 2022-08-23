@@ -1,0 +1,29 @@
+@import url("header.css");
+@import url("banner.css");
+@import url("swiper.css");
+@import url("card.css");
+@import url("topicos.css");
+@import url("cadastro-novidades.css");
+@import url("rodape.css");
+
+:root{
+    --cor-de-fundo: #EBECEE;
+    --branco-header: #FFFFFF;
+    --titulos-laranja: #EB9B00;
+    --titulos-azul: #002F52;
+    --texto-preto: #000000;
+    --azul-gradiente: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: 'Poppins';
+    --fundo-cadastro-novidades: #E5E5E5;
+    --fundo-rodape: #F9F9F9;
+    --fonte-secundaria: 'Josefin Sans';
+    --cinza-escuro-rodape: #474646;
+    --cinza-claro-rodape: #858585;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}

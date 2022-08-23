@@ -1,0 +1,155 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho{
+    background-color:var(--branco-header);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+} 
+
+
+.container__icone{
+    padding: 1em;
+}
+
+.lista__menu{
+    display:none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--branco-header);
+    width: 60%;
+}
+
+.header__botao:checked~.lista__menu{
+    display:block;
+}
+
+.lista__menu-titulo{
+    color:var(--titulos-laranja);
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    line-height: 24px;
+    padding: 1em;
+}
+
+.lista__menu-item{
+    color:var(--menu-opcoes-azul);
+    line-height: 24px;
+    padding: 1em;
+}
+
+.header__botao,
+.header__titulo,
+.header__opcoes,
+.container__texto{
+    display:none;
+}
+
+@media screen and (min-width: 1024px){
+    .header__titulo, .header__titulo-bold{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        line-height: 30px;
+        display:inline;
+        margin-top: 12px;
+    }
+
+    .header__titulo{
+        font-weight: 400;
+    }
+
+    .header__titulo-bold{
+        font-weight: 700;
+    }
+
+    .cabecalho__menu-hamburguer{
+        display:none;
+    }
+
+    .cabecalho{
+        padding: 0 4em;
+    }
+
+    .header__opcoes{
+        display: flex;
+    }
+
+    .header__opcoes-items{
+        display: flex;
+        padding: 1em;
+        cursor: pointer
+    }
+
+    .header__icone-transparente{
+        display:none;
+    }
+
+    .header__botao2:checked ~ .lista__menu{
+        display: block;
+        width: auto;
+    }
+
+    .header__botao2{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .cabecalho{
+        justify-content:flex-start;
+    }
+
+    .header__opcoes{
+        margin-right: auto;
+    }
+
+    .header__titulo{
+        margin-right: 2em;
+    }
+
+    .header__opcoes-items{
+        padding: .5em 1.5em 0 0;
+        cursor: pointer;
+    }
+
+    .container__link{
+        display:flex;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+    .header__nome{
+        font-size: 20px;
+        line-height: 30;
+    }
+
+    .container__texto{
+        display:block;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .header__opcoes-items:hover{
+        color: rgb(89, 125, 179);
+        transform: scale(1.1);
+        transition: 200ms;
+    }
+
+    .container__link:hover{
+        transform:scale(1.1);
+        transition: 200ms;
+    }
+}
